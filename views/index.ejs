@@ -1,0 +1,35 @@
+<% layout('layout/app') -%>
+
+<div class="container-fluid" >
+<div ng-controller="mainController">
+  
+<%-partial('partials/informer')%>
+
+<div class="col-sm-4 col-sm-offset-1 " style="padding: 30px;">
+
+<%-partial('partials/form')%>
+    
+</div>
+<div class="col-sm-6 " >
+
+<%-partial('partials/table')%>        
+    
+</div>
+        
+</div>
+</div>
+
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<!--script src="bootstrap/js/bootstrap.min.js"></script-->
+
+<!-- AngularJS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-sanitize.min.js"></script>
+<script src="/angularjs/adsManagementApp.js"></script>
+<script src="/angularjs/Services/dataService.js"></script>
+<script src="/angularjs/Services/actionService.js"></script>
+<script src="/angularjs/Services/informService.js"></script>
+<script src="/angularjs/Controllers/mainController.js"></script>

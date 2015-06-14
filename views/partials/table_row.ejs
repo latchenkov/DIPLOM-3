@@ -1,0 +1,9 @@
+<tr ng-repeat="ad_show in adsstore | orderBy:'-_id'"  ng-class=" ad_show.type == 'corporate' ? 'bg-warning' : '' ">
+    <td ng-bind="ad_show.created | date:'dd-MM-yyyy HH:mm:ss'"></td>
+    <td ng-bind="ad_show.title"></td>
+    <td><a class="btn btn-info btn-xs " ng-click="showAd(adsstore.indexOf(ad_show), adForm)" title="Показать объявление" ><strong>?</strong></a></td>
+    <td ng-bind="ad_show.price | number:2"></td>
+    <td ng-bind="ad_show.seller_name"></td>
+    <td align="center"><a class="btn btn-danger btn-xs" ng-click="removeAd(adsstore.indexOf(ad_show), adForm)" title="Удалить объявление" ><strong>X</strong></a></td>
+</tr>
+
