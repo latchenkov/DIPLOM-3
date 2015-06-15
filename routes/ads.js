@@ -14,7 +14,7 @@ router.get('/delete/:id', function(req, res, next) {
         return next(404);
     }
 
-    mongoose.models.Ad.findByIdAndRemove(id, function(err, ad) { 
+    Ad.findByIdAndRemove(id, function(err, ad) { 
         var result = {};
         if (err){ return next(err);}
             if (!ad){ return next(404);}
@@ -29,7 +29,7 @@ router.post('/save', function(req, res, next) {
     var data = req.body;
     var id = data._id;
    
-    mongoose.models.Ad.SaveOrUpdateById(data, id, function(err, ad){
+    Ad.SaveOrUpdateById(data, id, function(err, ad){
             if (err && err.name === "ValidationError") {
                 res.status(422);
                 return res.json(err.errors);

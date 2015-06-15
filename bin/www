@@ -10,7 +10,6 @@ var http = require('http');
 var log = require ('lib/log')(module);
 var config = require('config');
 
-console.log(process.env.PORT);
 /**
  * Get port from environment and store in Express.
  */
